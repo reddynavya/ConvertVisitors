@@ -1,0 +1,47 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html ng-app="LearnAngular">
+    <head>
+
+
+        <style>
+            .navbar { border-radius:0; }
+        </style>
+        <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <base href="/LearnAngular/src/">
+    </head>
+
+    <!-- apply our angular app to our site -->
+    <body>
+
+        <!-- NAVIGATION -->
+        <nav class="navbar navbar-light" style="background-color:lightblue;">
+            <div class="navbar-header">
+                <a class="navbar-brand" ui-sref="#">AngularUI Router</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a ui-route ui-sref="home">Home</a></li>
+                <li><a ui-sref="about">About</a></li>
+                <li><a ui-sref="contact">Contact</a></li>
+
+            </ul>
+        </nav>
+
+        <!-- MAIN CONTENT -->
+        <div class="container">
+
+            <!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+            <div ui-view></div>
+
+        </div>
+        <script src="../bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
+        <script src="../bower_components/angular/angular.js" type="text/javascript"></script>
+        <script src="../bower_components/angular-ui-router/release/angular-ui-router.js" type="text/javascript"></script>
+        <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../bower_components/angular-bootstrap/ui-bootstrap.min.js" type="text/javascript"></script>
+       
+        <script src="app/app.js" type="text/javascript"></script>
+        <script src="app/app.config.js" type="text/javascript"></script>
+    </body>
+</html>
